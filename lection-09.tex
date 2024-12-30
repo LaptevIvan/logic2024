@@ -282,7 +282,7 @@ $\gamma$, что $\vdash \gamma \leftrightarrow \neg\pi(\overline{\ulcorner\gamm
 \item Однако $\vdash \gamma\rightarrow\neg\gamma\rightarrow 1=0$. Условие 3 (применить два раза) даст $\pi(\overline{\ulcorner\gamma\urcorner})\vdash \pi(\overline{\ulcorner 1=0 \urcorner})$.
 \end{enumerate}
 
-\item $\neg\pi(\overline{\ulcorner 1=0 \urcorner})\rightarrow\neg\pi(\overline{\ulcorner\gamma\urcorner})$ (т. о дедукции, контрапозиция).
+\item $\vdash \neg\pi(\overline{\ulcorner 1=0 \urcorner})\rightarrow\neg\pi(\overline{\ulcorner\gamma\urcorner})$ (т. о дедукции, контрапозиция).
 \item $\vdash \neg\pi(\overline{\ulcorner 1=0 \urcorner})\rightarrow\gamma$ (определение $\gamma$).
 \end{enumerate}
 \end{frame}
@@ -355,7 +355,7 @@ $\text{Tr}_\mathcal{S} = \{ \ulcorner\alpha\urcorner\ |\ \llbracket\alpha\rrbrac
 \begin{proof}Пусть $\delta(a,p)$ представляет $D$, и пусть $\sigma(x)$ выражает множество $\text{Th}_\mathcal{S}$ (рассматриваемое как
 одноместное отношение).
 
-Пусть $\alpha(x) := \forall p.\delta(x,p)\rightarrow\neg\sigma(p)$. Верно ли, что $\ulcorner\alpha\urcorner\in\text{Th}$?
+Пусть $\alpha(x) := \forall p.\delta(x,p)\rightarrow\neg\sigma(p)$. Верно ли, что $\ulcorner\alpha\urcorner\in\text{Th}_\mathcal{S}$?
 \end{proof}
 \end{frame}
 
@@ -373,15 +373,15 @@ $\text{Th}_\text{Ф.А.}$ невыразимо в формальной ариф�
 
 \begin{frame}{Теорема Тарского}
 \begin{thm}[Тарского о невыразимости истины]
-Не существует формулы $\varphi(x)$, что $\llbracket \varphi(x) \rrbracket = \text{И}$ (в стандартной интерпретации) тогда и только
+Не существует формулы $\varphi(x)$, что $\llbracket \varphi(\overline{x}) \rrbracket = \text{И}$ (в стандартной интерпретации) тогда и только
 тогда, когда $x \in \text{Tr}_\text{ФА}$. \end{thm}
 \begin{proof}
 Пусть теория $\mathcal{S}$ --- формальная арифметика + аксиомы: все истинные в стандартной интерпретации формулы.
 Очевидно, что $\text{Th}_\mathcal{S} = \text{Tr}_\mathcal{S} = \text{Tr}_\text{ФА}$. 
 То есть $\text{Tr}_\text{ФА}$ невыразимо в $\mathcal{S}$.
 
-Пусть $\varphi$ таково, что $\llbracket\varphi(x)\rrbracket = \text{И}$ при $x \in \text{Tr}$.
-Тогда $\vdash\varphi(x)$, если $x \in \text{Tr}$ и $\vdash\neg\varphi(x)$, если $x \notin\text{Tr}$.
+Пусть $\varphi$ таково, что $\llbracket\varphi(\overline{x})\rrbracket = \text{И}$ при $x \in \text{Tr}$.
+Тогда $\vdash\varphi(\overline{x})$, если $x \in \text{Tr}$ и $\vdash\neg\varphi(\overline{x})$, если $x \notin\text{Tr}$.
 
 Тогда $\text{Tr}$ выразимо в $\mathcal{S}$. Противоречие.
 \end{proof}
